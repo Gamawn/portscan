@@ -1,0 +1,44 @@
+
+Scanning 65535 ports on 192.168.31.1 ...
+
+[00:02:14] ████████████████████████████████████████ 65535/65535 ports
+Results:
+PORT       STATE           SERVICE
+-----------------------------------
+53         open            DNS
+80         open            HTTP
+443        open            HTTPS
+784        open            Unknown
+8080       open            Unknown
+8098       open            Unknown
+8999       open            Unknown
+
+
+------
+
+
+new
+
+[dias@dias portscan]$ time ./portscan  --ip 192.168.31.1 -s 1 -e 65535
+
+Scanning 65535 ports on 192.168.31.1 with 20 workers...
+
+[00:00:08] ████████████████████████████████████████ 65535/65535 ports (7,556.4344/s)
+Results:
+PORT       STATE           SERVICE         LATENCY
+--------------------------------------------------
+53         open            DNS             2.59ms
+80         open            HTTP            2.95ms
+443        open            HTTPS           2.43ms
+784        open            Unknown         2.61ms
+8080       open            Unknown         2.75ms
+8098       open            Unknown         3.43ms
+8999       open            Unknown         2.22ms
+
+Scan completed!
+Found 7 open ports
+
+real	0m8.693s
+user	0m1.206s
+sys	0m2.694s
+[dias@dias portscan]$
