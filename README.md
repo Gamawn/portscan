@@ -117,7 +117,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - [tokio](https://tokio.rs/) for the async runtime
-- [pnet](https://github.com/libpnet/libpnet) for raw socket handling
 - [clap](https://clap.rs/) for CLI argument parsing
 - [indicatif](https://github.com/console-rs/indicatif) for progress bars
 
