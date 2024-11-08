@@ -110,10 +110,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 - [ ] Add configuration file support
 - [ ] Implement more advanced scan patterns
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - [tokio](https://tokio.rs/) for the async runtime
