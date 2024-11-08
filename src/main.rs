@@ -9,6 +9,9 @@ use tokio::net::TcpStream;
 use tokio::sync::Mutex;
 use tokio::time::{timeout, Duration};
 
+#[cfg(test)]
+mod tests;
+
 #[derive(Parser, Debug)]
 #[command(name = "portscanner")]
 #[command(about = "A fast port scanner with service detection", long_about = None)]
