@@ -20,8 +20,7 @@ A high-performance, concurrent port scanner written in Rust that supports TCP Co
 
 ## 🚀 Performance
 
-- Can scan 65535 ports in under a second
-- Full port scan (65535 ports) in seconds to minutes depending on network conditions
+- Full port scan (65535 ports) in seconds depending on network conditions
 - Efficient memory usage with batch processing
 - Concurrent scanning with customizable worker count
 
