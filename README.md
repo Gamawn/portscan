@@ -2,7 +2,7 @@
 
 A high-performance, concurrent port scanner written in Rust that supports TCP Connect scanning methods. This tool provides fast and efficient port scanning with service detection capabilities.
 
-![Port Scanner Demo]()
+![Port Scanner Demo](https://github.com/Gamawn/portscan/blob/main/media/usage.gif)
 
 ## ✨ Features
 
