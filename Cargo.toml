@@ -9,3 +9,4 @@ tokio = { version = "1.0", features = ["full"] }
 futures = "0.3"
 indicatif = "0.17"
 num_cpus = "1.16"
+thiserror = "1.0"
