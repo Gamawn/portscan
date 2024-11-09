@@ -62,9 +62,6 @@ jobs:
           - os: ubuntu-latest
             target: x86_64-unknown-linux-musl
             suffix: linux-x86_64-musl
-          - os: windows-latest
-            target: x86_64-pc-windows-msvc
-            suffix: windows-x86_64.exe
 
     steps:
       - uses: actions/checkout@v4
@@ -104,7 +101,6 @@ jobs:
           files: |
             portscan-linux-x86_64/portscan
             portscan-linux-x86_64-musl/portscan
-            portscan-windows-x86_64.exe/portscan.exe
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
