@@ -11,16 +11,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let res_len = results.len();
 
     println!("\nResults:");
-    println!(
-        "{:<10} {:<15} {:<15} {}",
-        "PORT", "STATE", "SERVICE", "LATENCY"
-    );
+    println!("{:<10} {:<15} {:<15} LATENCY", "PORT", "STATE", "SERVICE");
     println!("{}", "-".repeat(50));
 
     for result in results {
         let service = result.service.unwrap_or("Unknown".to_string());
-
-        // let service = result.service.unwrap_or_else(|| "Unknown".to_string());
 
         println!(
             "{:<10} {:<15} {:<15} {:.2}ms",

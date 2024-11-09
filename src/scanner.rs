@@ -1,6 +1,7 @@
 use super::*;
 use futures::StreamExt;
 
+#[allow(dead_code)]
 pub struct Scanner {
     ip: IpAddr,
     port_start: u16,
