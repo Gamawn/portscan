@@ -91,19 +91,28 @@ jobs:
     needs: build
     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Download all artifacts
         uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+
+      - name: Display structure of downloaded files
+        run: ls -R artifacts/
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            portscan-linux-x86_64/portscan
-            portscan-linux-x86_64-musl/portscan
+            artifacts/portscan-linux-x86_64/portscan-linux-x86_64
+            artifacts/portscan-linux-x86_64-musl/portscan-linux-x86_64-musl
           generate_release_notes: true
+          draft: false
+          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
